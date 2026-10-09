@@ -1,0 +1,260 @@
+:root {
+  font-family: "Segoe UI", sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  color: #1f2937;
+  background: #f3f6fb;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #eef4ff 0%, #f8fafc 100%);
+}
+
+button, input, select { font: inherit; }
+
+a { text-decoration: none; color: inherit; }
+
+.app-shell {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 24px;
+}
+
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #0f172a;
+  color: white;
+  border-radius: 16px;
+  padding: 20px 24px;
+  margin-bottom: 24px;
+  box-shadow: 0 12px 30px rgba(15, 23, 42, 0.18);
+}
+
+.eyebrow {
+  margin: 0 0 6px;
+  font-size: 12px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #a5b4fc;
+}
+
+.topbar h1 {
+  margin: 0;
+  font-size: clamp(1.6rem, 2vw, 2.3rem);
+}
+
+.nav {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.nav a {
+  padding: 10px 14px;
+  border-radius: 10px;
+  font-weight: 600;
+  color: #dbeafe;
+  transition: 0.2s ease;
+}
+
+.nav a.active {
+  background: #2563eb;
+  color: white;
+}
+
+.page {
+  display: grid;
+  gap: 24px;
+}
+
+.two-column {
+  grid-template-columns: 1fr 1.5fr;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.stat-card {
+  padding: 22px 18px;
+  border-radius: 16px;
+  color: white;
+  box-shadow: 0 10px 20px rgba(15, 23, 42, 0.1);
+}
+
+.stat-card p {
+  margin: 0;
+  opacity: 0.85;
+  font-size: 0.9rem;
+}
+
+.stat-card h3 {
+  margin: 10px 0 0;
+  font-size: 2rem;
+}
+
+.stat-card.blue { background: linear-gradient(135deg, #3b82f6, #1d4ed8); }
+.stat-card.green { background: linear-gradient(135deg, #22c55e, #15803d); }
+.stat-card.teal { background: linear-gradient(135deg, #14b8a6, #0f766e); }
+.stat-card.purple { background: linear-gradient(135deg, #a78bfa, #7c3aed); }
+
+.info-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 22px;
+}
+
+.panel {
+  background: white;
+  border-radius: 16px;
+  padding: 20px;
+  box-shadow: 0 10px 25px rgba(15, 23, 42, 0.06);
+}
+
+.panel h2 { margin-top: 0; margin-bottom: 18px; }
+
+.form { display: grid; gap: 16px; }
+
+.input-group {
+  display: grid;
+  gap: 8px;
+}
+
+.input-group label {
+  font-weight: 600;
+}
+
+.input-group input,
+.input-group select {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1px solid #dbe3f0;
+  border-radius: 10px;
+  background: #f8fafc;
+}
+
+.input-group input:focus,
+.input-group select:focus {
+  outline: 2px solid rgba(59, 130, 246, 0.25);
+  border-color: #60a5fa;
+}
+
+.error {
+  color: #dc2626;
+  font-size: 0.8rem;
+}
+
+.primary-button,
+.secondary-button,
+.small-button {
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.primary-button {
+  background: #2563eb;
+  color: white;
+  padding: 12px 16px;
+  font-weight: 700;
+}
+
+.primary-button:hover { background: #1d4ed8; }
+
+.secondary-button {
+  background: #e2e8f0;
+  color: #0f172a;
+  padding: 10px 14px;
+  margin-top: 12px;
+}
+
+.small-button {
+  padding: 7px 9px;
+  font-size: 0.8rem;
+  color: white;
+  background: #2563eb;
+}
+
+.small-button.secondary { background: #10b981; }
+.small-button.warning { background: #f59e0b; }
+.small-button.danger { background: #ef4444; }
+
+.small-button:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+.table-wrap { overflow-x: auto; }
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 700px;
+}
+
+th, td {
+  padding: 12px 10px;
+  border-bottom: 1px solid #e5e7eb;
+  text-align: left;
+}
+
+th {
+  background: #f8fafc;
+  color: #334155;
+}
+
+.action-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.summary-list, .book-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 12px;
+}
+
+.summary-list li, .book-list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 14px;
+  border-radius: 10px;
+  background: #f8fafc;
+}
+
+.empty-state {
+  margin: 0;
+  color: #475569;
+}
+
+@media (max-width: 900px) {
+  .two-column,
+  .info-grid,
+  .stats-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .topbar {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+}
